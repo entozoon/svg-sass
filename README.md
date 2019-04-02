@@ -5,10 +5,11 @@ SVG inline encoding for your SCSS content or background-image attributes.
 ## Include
 
 ```scss
-@import "./node_modules/sassdash/scss/sassdash";
+// With a suitable path
+@import "./node_modules/svg-sass/svg";
 
 // Or with webpack:
-@import "~sassdash";
+@import "~svg-sass";
 ```
 
 ## Usage
