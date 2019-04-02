@@ -2,6 +2,15 @@
 
 SVG inline encoding for your SCSS content or background-image attributes.
 
+## Include
+
+```scss
+@import "./node_modules/sassdash/scss/sassdash";
+
+// Or with webpack:
+@import "~sassdash";
+```
+
 ## Usage
 
 Encode your SVG XML into as CSS-friendly format, like so:

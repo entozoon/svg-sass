@@ -1,3 +1,25 @@
+//
+// SVG Libraries
+//
+@import "./node_modules/sassdash/scss/sassdash";
+//
+// str-replace
+// via https://css-tricks.com/snippets/sass/str-replace-function/
+@function str-replace($string, $search, $replace: "", $special: false) {
+  $index-offset: if($special, -1, 0);
+  $index: str-index($string, $search);
+  @if $index {
+    $index: $index + $index-offset;
+    @return str-slice($string, 1, $index - 1) + $replace +
+      str-replace(
+        str-slice($string, $index + str-length($search)),
+        $search,
+        $replace
+      );
+  }
+  @return $string;
+}
+
 // SVG
 // Encode SVG XML into as CSS-friendly format
 // (requires str-replace, above)
@@ -37,31 +59,11 @@
   // @debug $encoded;
   @return url("data:image/svg+xml,#{$encoded}");
 }
+
 //
 // SVG Mixin
 // Shorthand for function above. Applies to content by default
 //
 @mixin svg($svg, $attribute: content) {
   #{$attribute}: svg($svg);
-}
-//
-// SVG Libraries
-//
-@import "~sassdash";
-//
-// str-replace
-// via https://css-tricks.com/snippets/sass/str-replace-function/
-@function str-replace($string, $search, $replace: "", $special: false) {
-  $index-offset: if($special, -1, 0);
-  $index: str-index($string, $search);
-  @if $index {
-    $index: $index + $index-offset;
-    @return str-slice($string, 1, $index - 1) + $replace +
-      str-replace(
-        str-slice($string, $index + str-length($search)),
-        $search,
-        $replace
-      );
-  }
-  @return $string;
 }
