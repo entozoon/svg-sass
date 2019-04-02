@@ -36,9 +36,6 @@
   @if not function-exists(str-replace) {
     @error "You are missing the utility function 'str-replace', please copy it from somewhere!";
   }
-  @if not function-exists(_encode) {
-    @error "Please run npm install, as we're missing Sassdash";
-  }
 
   // Reveal the newlines characters! Turns our they're \a
   // $thinking: _split($svg, " ");

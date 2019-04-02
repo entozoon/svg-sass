@@ -1,6 +1,6 @@
 {
   "name": "svg-sass",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "SVG inline encoding for SCSS content or background-image attributes",
   "main": "_index.scss",
   "repository": {
