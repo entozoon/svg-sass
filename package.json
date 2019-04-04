@@ -1,8 +1,11 @@
 {
   "name": "svg-sass",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "SVG inline encoding for SCSS content or background-image attributes",
   "main": "_index.scss",
+  "scripts": {
+    "dev": "cd demo && npm start"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/entozoon/svg-sass.git"
