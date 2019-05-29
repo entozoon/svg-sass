@@ -2,6 +2,12 @@
 
 SVG inline encoding for your SCSS content or background-image attributes.
 
+## Install
+
+```bash
+npm i svg-sass
+```
+
 ## Include
 
 ```scss
