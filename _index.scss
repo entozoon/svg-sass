@@ -3,6 +3,8 @@
 //
 // str-replace
 // Modified from https://css-tricks.com/snippets/sass/str-replace-function/
+@use "sass:math";
+
 @function str-replace($string, $search, $replace: "", $special: false) {
   // NB: $special doesn't work for CRLF so yeah, don't
   $index-offset: if($special, -1, 0);
@@ -59,7 +61,7 @@
   $encoded: "";
   $slice: 2000;
   $index: 0;
-  $loops: ceil(str-length($svg) / $slice);
+  $loops: ceil(math.div(str-length($svg), $slice));
   @for $i from 1 through $loops {
     $chunk: str-slice($svg, $index, $index + $slice - 1);
     // Replace various things so as to encode SVG XML for CSS
