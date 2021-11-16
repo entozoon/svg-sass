@@ -1,6 +1,6 @@
 {
   "name": "svg-sass",
-  "version": "1.0.5",
+  "version": "2.0.0",
   "description": "SVG inline encoding for SCSS content or background-image attributes",
   "main": "_index.scss",
   "scripts": {
@@ -16,5 +16,8 @@
     "url": "https://github.com/entozoon/svg-sass/issues"
   },
   "homepage": "https://github.com/entozoon/svg-sass#readme",
-  "dependencies": {}
+  "dependencies": {},
+  "peerDependencies": {
+    "sass": ">=1.33.0"
+  }
 }
