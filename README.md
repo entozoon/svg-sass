@@ -24,9 +24,7 @@ Encode your SVG XML into as CSS-friendly format, like so:
 
 ```scss
 .foo {
-  content: svg('<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 160 160">
-    <circle cx="80" cy="80" r="80" fill="red" />
-  </svg>'
+  content: svg('<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 160 160"><circle cx="80" cy="80" r="80" fill="red" /></svg>'
 );
 ```
 
@@ -34,9 +32,7 @@ Similarly, with a background image:
 
 ```scss
 .foo {
-  background-image: svg('<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 160 160">
-    <circle cx="80" cy="80" r="80" fill="red" />
-  </svg>'
+  background-image: svg('<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 160 160"><circle cx="80" cy="80" r="80" fill="red" /></svg>'
 );
 ```
 
@@ -44,9 +40,8 @@ Or if you prefer the mixin style:
 
 ```scss
 .foo {
-  @include svg('<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 160 160">
-    <circle cx="80" cy="80" r="80" fill="red" />
-  </svg>', background-image);
+  @include svg('<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 160 160"><circle cx="80" cy="80" r="80" fill="red" /></svg>',
+  background-image);
 ```
 
 ## Features
