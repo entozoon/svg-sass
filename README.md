@@ -16,6 +16,9 @@ npm i svg-sass
 
 // Or with webpack:
 @import "~svg-sass";
+
+// Or with dart sass
+@use "svg-sass" as svg-sass;
 ```
 
 ## Usage
@@ -25,7 +28,10 @@ Encode your SVG XML into as CSS-friendly format, like so:
 ```scss
 .foo {
   content: svg('<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 160 160"><circle cx="80" cy="80" r="80" fill="red" /></svg>'
+  // or dart sass
+  content: svg-sass.svg('<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 160 160"><circle cx="80" cy="80" r="80" fill="red" /></svg>'
 );
+
 ```
 
 Similarly, with a background image:
